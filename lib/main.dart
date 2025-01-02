@@ -4,19 +4,27 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromARGB(66, 88, 164, 226),
+        //for backround decoration
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
+            //the container holds the background decoration. Thus, we'll remove the background color argument from scaffold widget
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(4, 5, 3, 73),
+                Color.fromARGB(66, 1, 33, 59),
                 Color.fromARGB(66, 88, 164, 226),
-                Color.fromARGB(66, 88, 164, 226),
-              ],
+              ], //background color gradient
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
           child: const Center(
-            child: Text('Hello World!!'),
+            child: Text(
+              'Hello World!',
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontSize: 28,
+              ),
+            ),
           ),
         ),
       ),
